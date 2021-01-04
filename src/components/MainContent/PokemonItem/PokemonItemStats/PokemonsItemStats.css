@@ -1,0 +1,28 @@
+.diagram__stat-small-text {
+    width: 20px;
+}
+
+.diagram {
+    margin: 9px 0;
+}
+
+.diagram__stat {
+    position: relative;
+}
+
+.diagram__stat::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: calc(50% - 3px / 2);
+    left: 35px; 
+    background-color: white;
+}
+
+.diagram__stat-small-number {
+    position: absolute;
+    width: 30px;
+    text-align: right;
+    right: calc(-1 * (35px + 30px));
+}

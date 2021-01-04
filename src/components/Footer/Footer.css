@@ -1,0 +1,39 @@
+.site-footer {
+    background-color: var(--primary-blue);
+    color: white;
+    height: 100px;
+}
+
+.site-footer-wrapper {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+    max-width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer__powered-by {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.site-footer__author {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.site-footer-wrapper * {
+    line-height: 1.5;
+}
+
+.site-footer-wrapper a {
+    color: var(--tomato);
+}
+
+.site-footer__author-social-media {
+    display: inline-flex;
+    flex-direction: column;
+}

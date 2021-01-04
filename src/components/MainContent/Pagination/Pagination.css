@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    color:white;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--dark-yellow);
+    margin: 0 7px;
+}
+
+.pageItem:hover {
+    cursor: pointer;
+}
+
+.pageItem.active {
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    background-color: var(--primary-blue);
+}
+
+.pagination__arrow:nth-child(1) {
+    transform: rotate(180deg);
+    padding-bottom: 4px;
+}

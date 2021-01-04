@@ -1,0 +1,92 @@
+.pokemon-name {
+    position: absolute;
+    top: -2vw;
+    left: 40px;
+    font-size: calc(10rem + 10vw);
+    line-height: 1;
+    color: var(--dark-yellow);
+    letter-spacing: 1rem;
+    opacity: 0.12;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.poke-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pokemon-text {
+    font-size: 10rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px - 100px);
+}
+
+
+.pokemon-avatar {
+    max-width: 100%;
+}
+
+.grid-poke-layout {
+    display: grid;
+    grid-template-columns: 325px minmax(300px, calc(1240px - 325px));
+    grid-template-rows: 325px 1fr;
+    column-gap: 30px;
+}
+
+.pokemon-diagram-stats {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.pokemon-diagram-stat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--dark-yellow);
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+    color: var(--darkest-yellow);
+}
+
+.pokemon-diagram-stat::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    background-color:var(--dark-yellow);
+    border: 2px solid var(--primary-blue);
+    height: calc(100% - 50px);
+    bottom: 50px;
+}
+
+.pokemon-diagram-stat-small-text {
+    font-size: 1.1rem;
+}
+
+.pokemon-diagram-stat-small-number {
+    font-size: 1.3rem;
+}
+
+.pokemon-height-weight__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 40px;
+    line-height: 1.5;
+}
+
+.poke-height-weight {
+    color: var(--darkest-yellow);
+    font-size: 1.2rem;
+}

@@ -1,0 +1,36 @@
+.order-options-stats__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    transition: all 250ms ease-in-out;
+    padding: 8px 0px;
+}
+
+.active-filter {
+    position: relative;
+    outline: none;
+}
+
+.custom-stats {
+    transition: all 100ms ease-in-out;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-stats:not(.active-filter):hover,
+.custom-stats:not(.active-filter):focus {
+    transform: scale(1.01);
+}
+
+.active-filter::before {
+    content: '';
+    position: absolute;
+    background-color: var(--dark-yellow);
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+}

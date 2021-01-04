@@ -1,0 +1,33 @@
+.order-options {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.filter-main {
+    padding: 7px 8px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.order-options-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    color: var(--dark-yellow);
+}
+
+.order-options-btn:hover {
+    cursor: pointer;
+}
+
+.custom-stats {
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.custom-stats:nth-child(1) {
+    font-size: 1.25rem;
+}

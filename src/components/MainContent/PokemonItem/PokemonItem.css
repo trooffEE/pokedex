@@ -1,0 +1,112 @@
+.pokemon-info__image {
+    margin: 0 auto;
+    width: 270px;
+}
+
+.pokemon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-yellow);
+    border: 3px solid var(--primary-blue);
+    border-radius: 10px;
+    color: white;
+    line-height: 1.5;
+}
+
+.pokemon-info__image-container {
+    background-color: var(--primary-blue);
+    width: 100%;
+    text-align: center;
+}
+
+.pokemon-info__text-container {
+    margin: 0 14px 16px 14px;
+}
+
+.pokemon-item__name {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.pokemon-btn {
+    position: relative;
+    padding: 7px 10px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    transition: all 250ms ease-in-out;
+}
+
+.pokemon-remove-btn {
+    background-color: white;
+    color: var(--primary-blue);
+}
+
+.pokemon-add-btn {
+    background-color: var(--primary-blue);
+    border: none;
+}
+
+.interact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-btn::before {
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    left: calc(50%);
+    border-radius: 4px;
+    width: 0;
+    height: 0;
+    transition: all 250ms ease-in-out;
+    z-index: -1;
+}
+
+.pokemon-remove-btn::before {
+    background-color: white;
+}
+
+.pokemon-add-btn::before {
+    background-color: var(--primary-blue);
+}
+
+.pokemon-btn:hover::before,
+.pokemon-btn:focus::before {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pokemon-remove-btn:hover::before,
+.pokemon-remove-btn:focus::before {
+    background-color: var(--primary-blue);
+}
+
+.pokemon-add-btn:hover::before,
+.pokemon-add-btn:focus::before {
+    background-color: white;
+}
+
+.pokemon-btn:hover {
+    cursor: pointer;
+    z-index: 0;
+}
+
+.pokemon-remove-btn:hover {
+    color: white;
+}
+
+.pokemon-add-btn:hover {
+    color: var(--primary-blue);
+}

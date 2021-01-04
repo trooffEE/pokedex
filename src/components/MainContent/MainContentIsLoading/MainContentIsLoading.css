@@ -1,0 +1,12 @@
+.main-content-is-loading__container {
+    height: calc(100vh - 60px - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-is-loading__container h1 {
+    color: var(--dark-yellow);
+    margin: 20px 0;
+}

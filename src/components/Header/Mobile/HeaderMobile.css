@@ -1,0 +1,53 @@
+/* BURGER MENU */
+
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    background-color: var(--primary-blue);
+    transition: all 250ms ease-in-out;
+}
+
+.burger-toggle {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    padding: 3px;
+}
+
+.burger__item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.burger__item:nth-child(1) {
+    top: 0;
+}
+
+.burger__item:nth-child(2) {
+    top: calc(50%);
+}
+
+.burger__item:nth-child(3) {
+    top: 100%;
+}
+
+.burger__item:hover,
+.burger__item:focus {
+    cursor: pointer;
+}
+
+.mobile-title {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 1px;
+}

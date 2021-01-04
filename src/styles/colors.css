@@ -1,0 +1,8 @@
+* {
+    --primary-blue: rgb(0, 39, 81);
+    --weak-blue: rgba(7, 73, 143);
+    --primary-yellow: rgb(214, 193, 40);
+    --dark-yellow: rgb(124, 111, 23);
+    --darkest-yellow: rgb(82, 73, 17);
+    --tomato: rgb(210, 37, 43);
+}
