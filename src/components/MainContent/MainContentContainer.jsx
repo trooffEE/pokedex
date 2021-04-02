@@ -8,7 +8,9 @@ class MainContentContainer extends Component {
 
     componentDidMount() {
         this.props.setPokemonMaxAmount();
-        this.props.loadAllPokemonsData();
+        if (!this.props.areHere) {
+            this.props.loadAllPokemonsData();
+        }
         this.props.loadDefaultPokemonData(this.props.currentPokemonPage);
     }
 
@@ -24,6 +26,7 @@ const mapStateToProps = (state) => {
         pokemons: state.pokemonReducer.pokemons,
         isFetching: state.pokemonReducer.isFetching,
         currentPokemonPage: state.pokemonReducer.currentPokemonPage,
+        areHere: state.pokemonReducer.areHere,
     }
 };
 

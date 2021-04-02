@@ -13,10 +13,12 @@ const SET_PREVIOUS_PAGE = 'SET_PREVIOUS_PAGE';
 const SET_NEXT_PAGE = 'SET_NEXT_PAGE';
 const SET_IS_SEARCHING_STATUS = 'SET_IS_SEARCHING_STATUS';
 const SET_POKEMONS_DEFAULT_STATUS = 'SET_POKEMONS_DEFAULT_STATUS';
+const SET_POKEMONS_ARE_HERE = 'SET_POKEMONS_ARE_HERE';
 
 const pokemonAPI = new PokemonAPI();
 
 const initState = {
+    areHere: false,
     pokemon: null,
     pokemonLoadingInProgress: true,
     pokemons: null,
@@ -98,6 +100,11 @@ export const setPokemon = (pokemon) => ({
 export const setPokemonLoadingStatus = (status) => ({
     type: SET_POKEMON_LOADING_STATUS,
     isLoading: status
+});
+
+export const areAllPokemonsData = (areHere) => ({
+    type: SET_POKEMONS_ARE_HERE,
+    areHere
 });
 
 const pokemonReducer = (state = initState, action) => {
@@ -198,6 +205,11 @@ const pokemonReducer = (state = initState, action) => {
                 ...state,
                 isSearchDefault: action.status
             }
+        case SET_POKEMONS_ARE_HERE:
+            return {
+                ...state,
+                areHere: action.areHere
+            }
         default:
             return state;
     }
@@ -218,10 +230,11 @@ export function loadDefaultPokemonData(currentPage = 1) {
 export function loadAllPokemonsData() {
     return async (dispatch) => {
         dispatch(displayFetching(true));
-        return await pokemonAPI.getAllPokemons(700)
+        return await pokemonAPI.getAllPokemons(100)
             .then(data => {
                 dispatch(setAllPokemons(data));
                 dispatch(displayFetching(false));
+                dispatch(areAllPokemonsData(true));
             });
     }
 };
